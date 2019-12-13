@@ -1,5 +1,7 @@
 package com.yys.pattern.proxy.dynamicproxy.cglibproxy;
 
+import net.sf.cglib.core.DebuggingClassWriter;
+
 public class ProxyTest {
 
     /**
@@ -9,6 +11,10 @@ public class ProxyTest {
      */
     public static void main(String[] args) {
 
+        // 利用 cglib 的代理类可以将内存中的class文件写入本地磁盘
+        String path = "D:\\java\\yys\\yys-demo\\yys-design-pattern\\yys-pattern-proxy\\src\\main\\java";
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, path);
+
         // 创建目标对象
         // BoySingleDog target = new BoySingleDog();
         GirlSingleDog target = new GirlSingleDog();
@@ -17,7 +23,9 @@ public class ProxyTest {
         // BoySingleDog proxy = (BoySingleDog) new CGlibMeiPoProxy().getInstance(target.getClass());
         GirlSingleDog proxy = (GirlSingleDog) new CGlibMeiPoProxy().getInstance(target.getClass());
 
+        // 方法执行
         proxy.findLove();
+
     }
 
 }
