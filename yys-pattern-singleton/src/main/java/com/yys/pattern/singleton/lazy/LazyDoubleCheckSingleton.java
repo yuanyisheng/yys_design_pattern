@@ -45,4 +45,18 @@ public class LazyDoubleCheckSingleton {
     // 2、初始化对象
     // 3、设置对象指向刚分配的内存地址
 
+    /**
+     * 为什么需要加volatile才可以？
+     * 因为：
+     * 1、先说下new Object()在底层是几步骤
+     *      1.memory=allocate()分配对象的内存空间。
+     *      2.createInstance()初始化对象
+     *      3.instance=memory 设置instance指向刚分配的内存
+     * 2、再说下为什么需要volatile
+     *      因为JVM指令重排序。
+     *      若3.和2.被重排序换位置了，那结果是先分配内存空间，然后指向，最后初始化对象。那么
+     *      我们这时候虽然是有synchronize，但是两次进入都发现没有初始化对象，因为他指向内存
+     *      分配的空间了，尚未初始化对象。
+     */
+
 }
