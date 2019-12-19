@@ -1,4 +1,4 @@
-package com.yys.pattern.singleton.lazy;
+package com.yys.pattern.singleton;
 
 public class SingletonTest {
 

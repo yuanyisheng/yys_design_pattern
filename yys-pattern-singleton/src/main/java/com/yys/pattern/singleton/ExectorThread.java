@@ -1,7 +1,10 @@
-package com.yys.pattern.singleton.lazy;
+package com.yys.pattern.singleton;
 
 import com.yys.pattern.singleton.hungry.HungrySingleton;
 import com.yys.pattern.singleton.hungry.HungryStaticSingleton;
+import com.yys.pattern.singleton.lazy.LazyDoubleCheckSingleton;
+import com.yys.pattern.singleton.lazy.LazyInnerClassSingleton;
+import com.yys.pattern.singleton.lazy.LazySimpleSingleton;
 
 public class ExectorThread implements Runnable {
 

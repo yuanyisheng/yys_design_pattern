@@ -34,6 +34,7 @@ public class LazyInnerClassSingleton {
     }
 
     // 默认不加载，使用LazyInnerClassSingleton时，会先初始化内部类，没使用，则内部类不加载
+    // 内部类一定是要在方法调用前初始化
     private static class LazyHolder {
         private final static LazyInnerClassSingleton LAZY = new LazyInnerClassSingleton();
     }
