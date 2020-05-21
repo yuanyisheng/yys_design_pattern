@@ -1,16 +1,16 @@
 package com.yys.pattern.factory.abstractfactory;
 
 /**
- * 普通修仙功法 - 抽象工厂
+ * 普通修仙功法工厂
  * @author yys
  */
-public class NormalArtsFactory implements IMartialArtsFactory {
+public class NormalArtsFactory extends IMartialArtsFactory {
 
-    public ICreateArts createCreateArts() {
-        return new NormalArtsCreate();
+    public IArtsImprove createArtsImprove() {
+        return new NormalArtsImprove();
     }
 
-    public IXiuLianArts createXiuLianArts() {
-        return new NormalArtsXiuLian();
+    public IArtsPractice createArtsPractice() {
+        return new NormalArtsPractice();
     }
 }

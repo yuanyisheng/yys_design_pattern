@@ -14,11 +14,19 @@ public class AbstractFactoryTest {
      */
     public static void main(String[] args) {
 
+//        // 普通修仙功法
+//        IMartialArtsFactory factory = new NormalArtsFactory();
+//        IArtsPractice artsPractice = factory.createArtsPractice();
+//        artsPractice.practice();
+//        IArtsImprove artsImprove = factory.createArtsImprove();
+//        artsImprove.improve();
+
+        // 星辰变功法
         IMartialArtsFactory factory = new XingChenBianArtsFactory();
-        ICreateArts createArts = factory.createCreateArts();
-        createArts.improve();
-        IXiuLianArts xiuLianArts = factory.createXiuLianArts();
-        xiuLianArts.practice();
+        IArtsPractice artsPractice = factory.createArtsPractice();
+        artsPractice.practice(); // 修炼功法
+        IArtsImprove artsImprove = factory.createArtsImprove();
+        artsImprove.improve(); // 完善创造功法
 
     }
 

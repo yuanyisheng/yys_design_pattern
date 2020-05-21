@@ -2,16 +2,16 @@ package com.yys.pattern.factory.abstractfactory;
 
 
 /**
- * 星辰变功法 - 抽象工厂
+ * 星辰变功法工厂
  * @author yys
  */
-public class XingChenBianArtsFactory implements IMartialArtsFactory {
+public class XingChenBianArtsFactory extends IMartialArtsFactory {
 
-    public ICreateArts createCreateArts() {
-        return new XingChenBianArtsCreate();
+    public IArtsImprove createArtsImprove() {
+        return new XingChenBianArtsImprove();
     }
 
-    public IXiuLianArts createXiuLianArts() {
-        return new XingChenBianArtsXiuLian();
+    public IArtsPractice createArtsPractice() {
+        return new XingChenBianArtsPractice();
     }
 }
