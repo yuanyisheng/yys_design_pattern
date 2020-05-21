@@ -1,4 +1,4 @@
-package com.yys.pattern.prototype.shallow;
+package com.yys.pattern.prototype.shallow.yys;
 
 public class Client {
 
