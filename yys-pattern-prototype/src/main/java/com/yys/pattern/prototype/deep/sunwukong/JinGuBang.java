@@ -1,6 +1,7 @@
-package com.yys.pattern.prototype.deep;
+package com.yys.pattern.prototype.deep.sunwukong;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -9,12 +10,13 @@ import java.io.Serializable;
  *      金箍棒
  * @author yys
  */
-@Data
+@Getter
+@Setter
 public class JinGuBang implements Serializable {
 
-    private float h = 100;
+    private float h = 99;
 
-    private float w = 10;
+    private float w = 9;
 
     public void big() {
         this.h *= 10;

@@ -1,6 +1,7 @@
-package com.yys.pattern.prototype.deep;
+package com.yys.pattern.prototype.deep.sunwukong;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.*;
 
@@ -9,7 +10,8 @@ import java.io.*;
  *      齐天大圣类
  * @author yys
  */
-@Data
+@Getter
+@Setter
 public class QiTianDaSheng extends Monkey implements Cloneable, Serializable {
 
     private JinGuBang jinGuBang;

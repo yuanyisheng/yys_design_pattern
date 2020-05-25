@@ -1,4 +1,4 @@
-package com.yys.pattern.prototype.deep;
+package com.yys.pattern.prototype.deep.sunwukong;
 
 /**
  * 深克隆

@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author yys
  */
-public class ConcretePrototypeB implements Cloneable{
+public class ConcretePrototypeB implements Cloneable {
 
     private String name;
 
@@ -41,18 +41,16 @@ public class ConcretePrototypeB implements Cloneable{
         this.hobbies = hobbies;
     }
 
-
     // 重写克隆方法
     @Override
     protected Object clone() {
-        Object clone = null;
         try {
-            clone = super.clone();
+            Object clone = super.clone();
             return clone;
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        return clone;
+        return clone();
     }
 
 }
