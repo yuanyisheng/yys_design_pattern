@@ -3,7 +3,7 @@ package com.yys.pattern.delegate.simple;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * 策略模式
+ * 委派模式
  *      部门经理
  * @author yys
  */

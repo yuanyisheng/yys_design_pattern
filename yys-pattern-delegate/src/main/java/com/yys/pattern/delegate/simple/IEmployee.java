@@ -1,7 +1,7 @@
 package com.yys.pattern.delegate.simple;
 
 /**
- * 策略模式
+ * 委派模式
  *      员工接口
  * @author yys
  */
